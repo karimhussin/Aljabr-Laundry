@@ -6,7 +6,11 @@ const ContactPage: React.FC = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center p-4 font-sans text-gray-800 animated-gradient">
-      <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 hover:shadow-2xl">
+      <div className="bg-bubbles">
+        {/* Create 10 bubble elements */}
+        {[...Array(10)].map((_, i) => <span key={i}></span>)}
+      </div>
+      <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 max-w-lg w-full text-center transform transition-all duration-500 hover:shadow-2xl relative z-10">
         <img src={aljabrLogoUrl} alt="ALJABR Logo" className="mx-auto mb-8 w-56" />
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           مرحباً بكم في شركات الجبر
